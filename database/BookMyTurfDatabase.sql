@@ -78,7 +78,7 @@ CREATE TABLE `booking` (
   `BookingID` int NOT NULL AUTO_INCREMENT,
   `UserID` int NOT NULL,
   `SlotID` int NOT NULL,
-  `BookingDate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `BookingDate` datetime DEFAULT CURRENT_TIMESTAMP,
   `TotalAmount` decimal(10,2) NOT NULL,
   `BookingStatus` enum('Confirmed','Cancelled','Completed') DEFAULT 'Confirmed',
   `PaymentStatus` enum('Pending','Success','Refunded') DEFAULT 'Pending',
@@ -144,8 +144,7 @@ CREATE TABLE `payment` (
   `BankDetails` varchar(200) DEFAULT NULL,
   `PaymentStatus` enum('Success','Failed','Pending') NOT NULL,
   `TransactionID` varchar(100) NOT NULL,
-  `TransactionDate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `PaymentDate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `PaymentDate` datetime DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`PaymentID`),
   UNIQUE KEY `TransactionID` (`TransactionID`),
   KEY `BookingID` (`BookingID`),
@@ -220,7 +219,7 @@ CREATE TABLE `report` (
   `TotalUsers` int NOT NULL,
   `TotalTurfs` int NOT NULL,
   `ReportContent` text,
-  `GeneratedDate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `GeneratedDate` datetime DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`ReportID`),
   KEY `AdminID` (`AdminID`),
   CONSTRAINT `report_ibfk_1` FOREIGN KEY (`AdminID`) REFERENCES `admin` (`AdminID`)
@@ -267,6 +266,33 @@ LOCK TABLES `slot_master` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `sports`
+--
+
+DROP TABLE IF EXISTS `sports`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `sports` (
+  `SportID` int NOT NULL AUTO_INCREMENT,
+  `SportName` varchar(50) NOT NULL,
+  `DefaultRules` text,
+  `IsActive` tinyint(1) DEFAULT '1',
+  `CreatedDate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`SportID`),
+  UNIQUE KEY `SportName` (`SportName`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `sports`
+--
+
+LOCK TABLES `sports` WRITE;
+/*!40000 ALTER TABLE `sports` DISABLE KEYS */;
+/*!40000 ALTER TABLE `sports` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `turf`
 --
 
@@ -280,7 +306,7 @@ CREATE TABLE `turf` (
   `Location` varchar(200) NOT NULL,
   `City` varchar(50) NOT NULL,
   `Description` text,
-  `TurfStatus` enum('Active','Inactive') NOT NULL DEFAULT 'Active',
+  `TurfStatus` enum('Active','Inactive') DEFAULT 'Active',
   `CreatedDate` datetime DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`TurfID`),
   KEY `TurfOwnerID` (`TurfOwnerID`),
@@ -337,7 +363,7 @@ CREATE TABLE `turf_photos` (
   `IsMain` tinyint(1) DEFAULT '0',
   `Caption` varchar(100) DEFAULT NULL,
   `PhotoType` varchar(50) DEFAULT NULL,
-  `UploadDate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `UploadDate` datetime DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`PhotoID`),
   KEY `TurfID` (`TurfID`),
   CONSTRAINT `turf_photos_ibfk_1` FOREIGN KEY (`TurfID`) REFERENCES `turf` (`TurfID`) ON DELETE CASCADE
@@ -351,6 +377,32 @@ CREATE TABLE `turf_photos` (
 LOCK TABLES `turf_photos` WRITE;
 /*!40000 ALTER TABLE `turf_photos` DISABLE KEYS */;
 /*!40000 ALTER TABLE `turf_photos` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `turf_sports`
+--
+
+DROP TABLE IF EXISTS `turf_sports`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `turf_sports` (
+  `TurfID` int NOT NULL,
+  `SportID` int NOT NULL,
+  PRIMARY KEY (`TurfID`,`SportID`),
+  KEY `SportID` (`SportID`),
+  CONSTRAINT `turf_sports_ibfk_1` FOREIGN KEY (`TurfID`) REFERENCES `turf` (`TurfID`) ON DELETE CASCADE,
+  CONSTRAINT `turf_sports_ibfk_2` FOREIGN KEY (`SportID`) REFERENCES `sports` (`SportID`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `turf_sports`
+--
+
+LOCK TABLES `turf_sports` WRITE;
+/*!40000 ALTER TABLE `turf_sports` DISABLE KEYS */;
+/*!40000 ALTER TABLE `turf_sports` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -370,14 +422,14 @@ CREATE TABLE `user` (
   `PermanentAddress` varchar(200) NOT NULL,
   `CityName` varchar(50) NOT NULL,
   `ContactPhoneNo` varchar(15) NOT NULL,
-  `AccountStatus` enum('Active','Suspended') NOT NULL DEFAULT 'Active',
   `CreatedDate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `UpdatedDate` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `account_status` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`UserID`),
   UNIQUE KEY `EmailAddress` (`EmailAddress`),
   KEY `UserTypeID` (`UserTypeID`),
   CONSTRAINT `user_ibfk_1` FOREIGN KEY (`UserTypeID`) REFERENCES `user_type` (`UserTypeID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -386,7 +438,38 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
+INSERT INTO `user` VALUES (1,3,'John','Doe','john.doe@example.com','123456','Delhi, India','Delhi','9876543210','2026-01-24 02:55:35',NULL,'active'),(2,3,'Amit','Sharma','amit.sharma@gmail.com','amit@123','Andheri East, Mumbai','Mumbai','9123456789','2026-01-24 02:58:19',NULL,'active'),(3,2,'Priya','Verma','priya.verma@gmail.com','priya@123','Whitefield, Bangalore','Bangalore','9988776655','2026-01-24 02:59:11',NULL,'active'),(4,1,'Sanjana','Oza','sanjana@gmail.com','sanj@123','Navrangpura, Ahmedabad','Ahmedabad','9090909090','2026-01-24 03:00:29',NULL,'inactive');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `user_session`
+--
+
+DROP TABLE IF EXISTS `user_session`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `user_session` (
+  `SessionID` int NOT NULL AUTO_INCREMENT,
+  `UserID` int NOT NULL,
+  `SessionToken` varchar(255) NOT NULL,
+  `LoginTime` datetime DEFAULT CURRENT_TIMESTAMP,
+  `ExpiryTime` datetime NOT NULL,
+  `IsActive` tinyint(1) DEFAULT '1',
+  PRIMARY KEY (`SessionID`),
+  UNIQUE KEY `SessionToken` (`SessionToken`),
+  KEY `UserID` (`UserID`),
+  CONSTRAINT `user_session_ibfk_1` FOREIGN KEY (`UserID`) REFERENCES `user` (`UserID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `user_session`
+--
+
+LOCK TABLES `user_session` WRITE;
+/*!40000 ALTER TABLE `user_session` DISABLE KEYS */;
+/*!40000 ALTER TABLE `user_session` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -398,11 +481,13 @@ DROP TABLE IF EXISTS `user_type`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `user_type` (
   `UserTypeID` int NOT NULL AUTO_INCREMENT,
-  `TypeName` varchar(20) NOT NULL,
-  `Description` varchar(100) DEFAULT NULL,
+  `TypeName` varchar(50) NOT NULL,
+  `Description` varchar(200) DEFAULT NULL,
+  `IsActive` tinyint(1) DEFAULT '1',
+  `CreatedDate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`UserTypeID`),
   UNIQUE KEY `TypeName` (`TypeName`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -411,16 +496,9 @@ CREATE TABLE `user_type` (
 
 LOCK TABLES `user_type` WRITE;
 /*!40000 ALTER TABLE `user_type` DISABLE KEYS */;
+INSERT INTO `user_type` VALUES (1,'Admin','Administrator with all rights',1,'2026-01-23 11:53:54'),(2,'TurfOwner','Owner of turf',1,'2026-01-23 11:53:54'),(3,'Player','Regular player/customer',1,'2026-01-23 11:53:54');
 /*!40000 ALTER TABLE `user_type` ENABLE KEYS */;
 UNLOCK TABLES;
-
---
--- Dumping events for database 'bookmyturf_db'
---
-
---
--- Dumping routines for database 'bookmyturf_db'
---
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -431,4 +509,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-01-20 17:51:38
+-- Dump completed on 2026-01-24  8:40:30

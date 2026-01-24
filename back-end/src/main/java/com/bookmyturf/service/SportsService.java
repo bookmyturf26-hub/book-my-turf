@@ -12,9 +12,7 @@ public class SportsService {
     @Autowired
     private SportsRepository sportsRepository;
 
-    /**
-     * Add new sport
-     */
+   
     public Sports addSport(Sports sports) {
         return sportsRepository.save(sports); // ✅ correct
     }

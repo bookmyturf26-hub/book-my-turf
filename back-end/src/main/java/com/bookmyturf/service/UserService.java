@@ -1,5 +1,6 @@
 package com.bookmyturf.service;
 
+import com.bookmyturf.dto.UserRegisterDTO;
 import com.bookmyturf.entity.User;
 import com.bookmyturf.entity.UserType;
 import com.bookmyturf.repository.UserRepository;
@@ -58,6 +59,20 @@ public class UserService {
         return user;
     }
 
+    //overload service
+    public User registerUser(UserRegisterDTO dto) {
+        User user = new User();
+        user.setFirstName(dto.getFirstName());
+        user.setLastName(dto.getLastName());
+        user.setEmailAddress(dto.getEmailAddress());
+        user.setPassword(dto.getPassword());
+        user.setPermanentAddress(dto.getPermanentAddress());
+        user.setCityName(dto.getCityName());
+        user.setContactPhoneNo(dto.getContactPhoneNo());
+        user.setAccountStatus(dto.getAccountStatus());
+
+        return registerUser(user, dto.getUserType()); // call existing method
+    }
 
     // Fetch all users
     public List<User> getAllUsers() {

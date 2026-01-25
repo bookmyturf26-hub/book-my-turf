@@ -1,17 +1,25 @@
-HELP.md
-target/
-.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+# Ignore build/output folders
+/back-end/target/
+/back-end/build/
+/front-end/node_modules/
 
-### STS ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
+# Exclude source code from being ignored
+!/back-end/src/main/java/
+!/back-end/src/main/resources/
+!/back-end/src/test/java/
+!/back-end/src/test/resources/
+!/front-end/
+
+# Maven wrapper
+.mvn/wrapper/maven-wrapper.jar
+
+# IDE files
+.idea/
+*.iml
+*.classpath
+*.project
+.settings/
+.vscode/
 
 ### IntelliJ IDEA ###
 .idea
@@ -25,10 +33,10 @@ target/
 /dist/
 /nbdist/
 /.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
 
 ### VS Code ###
 .vscode/
-/.metadata/
+.metadata/
+
+# Other
+HELP.md

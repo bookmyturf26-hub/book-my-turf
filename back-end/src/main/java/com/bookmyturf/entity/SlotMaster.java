@@ -5,6 +5,7 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.Set;
+import com.bookmyturf.entity.SlotMaster;
 
 @Entity
 @Table(

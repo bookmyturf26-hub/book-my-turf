@@ -1,34 +1,37 @@
 package com.bookmyturf.controller;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
-import com.bookmyturf.entity.Booking;
+import com.bookmyturf.dto.BookingRequestDTO;
+import com.bookmyturf.dto.BookingResponseDTO;
 import com.bookmyturf.service.BookingService;
 
 @RestController
-	@RequestMapping("/api/bookings")
-	public class BookingController {
+@RequestMapping("/api/bookings")
+public class BookingController {
 
-	    @Autowired
-	    private BookingService bookingService;
+    @Autowired
+    private BookingService bookingService;
 
-	    @PostMapping
-	    public Booking book(@RequestBody Booking booking) {
-	        return bookingService.createBooking(booking);
-	    }
+    //Create Booking
+    @PostMapping("/book")
+    public BookingResponseDTO createBooking(@RequestBody BookingRequestDTO dto) {
+        // Use service to create booking and map to DTO
+        return bookingService.mapToResponse(bookingService.createBooking(dto));
+    }
 
-	    @GetMapping("/user/{userId}")
-	    public List<Booking> getUserBookings(@PathVariable Integer userId) {
-	        return bookingService.getUserBookings(userId);
-	    }
-	}
-
-
+    //User Bookings
+   
+    @PostMapping("/user/bookings")
+    public List<BookingResponseDTO> getUserBookings(@RequestBody BookingRequestDTO dto) {
+       
+        return bookingService.getUserBookings(dto.getUserId())
+                             .stream()
+                             .map(bookingService::mapToResponse)
+                             .collect(Collectors.toList());
+    }
+}

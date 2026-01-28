@@ -60,23 +60,6 @@ public class User {
         }
     }
 
-
-  /*  @Column(name = "CreatedDate", nullable = false)
-    private LocalDateTime createdDate;
-
-    @Column(name = "UpdatedDate")
-    private LocalDateTime updatedDate;
-
-   @PrePersist
-    protected void onCreate() {
-        this.createdDate = LocalDateTime.now();
-    }
-
-    @PreUpdate
-    protected void onUpdate() {
-        this.updatedDate = LocalDateTime.now();
-    }
-*/
     
     @CreationTimestamp
     @Column(name = "CreatedDate", updatable = false)

@@ -1,11 +1,16 @@
 package com.bookmyturf.controller;
 
+import com.bookmyturf.dto.UserLoginDTO;
+import com.bookmyturf.dto.UserRegisterDTO;
 import com.bookmyturf.entity.User;
 import com.bookmyturf.service.UserService;
+
+import jakarta.validation.Valid;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -16,17 +21,26 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @PostMapping("/register")
-    public User registerUser(@RequestBody User user, 
-                             @RequestParam String typeName) {
-        return userService.registerUser(user, typeName);
-    }
    
- // Login
+
+
+    @PostMapping("/register")
+    public ResponseEntity<String> registerUser(@Valid @RequestBody UserRegisterDTO dto) {
+
+        User savedUser = userService.registerUser(dto);
+
+        return ResponseEntity.ok("User registered successfully");
+    }
+    
+    
     @PostMapping("/login")
-    public User loginUser(@RequestParam String email,
-                          @RequestParam String password) {
-        return userService.loginUser(email, password);
+    public ResponseEntity<User> loginUser(@RequestBody UserLoginDTO dto) {
+
+        User user = userService.loginUser(
+                dto.getEmailAddress(),
+                dto.getPassword()
+        );
+        return ResponseEntity.ok(user);
     }
 
     @GetMapping("/all")

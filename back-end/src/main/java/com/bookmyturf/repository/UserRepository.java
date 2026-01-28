@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, Integer> {
-    // Optional: to check duplicate email
+   
     User findByEmailAddress(String emailAddress);
 }

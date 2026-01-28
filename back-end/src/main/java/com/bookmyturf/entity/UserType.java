@@ -9,7 +9,7 @@ public class UserType {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "UserTypeID") // exact DB column
+    @Column(name = "UserTypeID")
     private Integer userTypeId;
 
     @Column(name = "TypeName")

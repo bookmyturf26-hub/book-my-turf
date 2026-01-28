@@ -4,10 +4,12 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import com.bookmyturf.dto.BookingRequestDTO;
 import com.bookmyturf.dto.BookingResponseDTO;
+import com.bookmyturf.dto.CancelBookingRequestDTO;
 import com.bookmyturf.service.BookingService;
 
 @RestController
@@ -34,4 +36,17 @@ public class BookingController {
                              .map(bookingService::mapToResponse)
                              .collect(Collectors.toList());
     }
+    
+    @PutMapping("/cancel")
+    public ResponseEntity<String> cancelBooking(
+            @RequestBody CancelBookingRequestDTO request) {
+
+        if (request.getBookingId() == null) {
+            throw new RuntimeException("BookingId must not be null");
+        }
+
+        bookingService.cancelBooking(request.getBookingId());
+        return ResponseEntity.ok("Booking cancelled successfully");
+    }
+
 }

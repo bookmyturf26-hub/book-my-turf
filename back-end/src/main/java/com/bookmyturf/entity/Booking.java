@@ -84,8 +84,8 @@ public class Booking {
 		return bookingStatus;
 	}
 
-	public void setBookingStatus(BookingStatus bookingStatus) {
-		this.bookingStatus = bookingStatus;
+	public void setBookingStatus(BookingStatus string) {
+		this.bookingStatus = string;
 	}
 
 	public PaymentStatus getPaymentStatus() {

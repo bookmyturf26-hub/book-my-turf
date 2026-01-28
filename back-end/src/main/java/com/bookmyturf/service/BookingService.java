@@ -52,7 +52,7 @@ public class BookingService {
         booking.setTotalAmount(dto.getTotalAmount());
         booking.setBookingStatus(BookingStatus.Confirmed);
         booking.setPaymentStatus(PaymentStatus.Pending);
-        booking.setBookingDate(LocalDateTime.now()); // ✅ Set booking date
+      //  booking.setBookingDate(LocalDateTime.now()); 
 
         // Mark slot as unavailable
         slot.setIsAvailable(false);
@@ -60,6 +60,23 @@ public class BookingService {
 
         // Save booking and return
         return bookingRepository.save(booking);
+    }
+    @Transactional
+    public void cancelBooking(Integer bookingId) {
+
+        Booking booking = bookingRepository.findById(bookingId)
+            .orElseThrow(() -> new RuntimeException("Booking not found"));
+        if (booking.getBookingStatus() == BookingStatus.Cancelled) {
+            throw new RuntimeException("Booking already cancelled");
+        }
+
+        booking.setBookingStatus(BookingStatus.Cancelled);
+
+        SlotMaster slot = booking.getSlot();
+        slot.setIsAvailable(true);
+        slotRepository.save(slot);
+
+        bookingRepository.save(booking);
     }
 
     // Map entity to DTO for response
@@ -71,10 +88,11 @@ public class BookingService {
         response.setTotalAmount(booking.getTotalAmount());
         response.setBookingStatus(booking.getBookingStatus().name());
         response.setPaymentStatus(booking.getPaymentStatus().name());
-        response.setBookingDate(booking.getBookingDate()); // ✅ works with LocalDateTime
+        response.setBookingDate(booking.getBookingDate());
         return response;
     }
-
+    
+    
     // Get all bookings for a user
     public List<Booking> getUserBookings(Integer userId) {
         return bookingRepository.findByUser_UserID(userId);

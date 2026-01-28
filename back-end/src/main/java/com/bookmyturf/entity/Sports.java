@@ -1,6 +1,10 @@
 package com.bookmyturf.entity;
 
 import jakarta.persistence.*;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
+
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "SPORTS")
@@ -8,23 +12,29 @@ public class Sports {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer sportID;
+    @Column(name = "SportID")
+    private Integer sportId;
 
+    @Column(name = "SportName", nullable = false, unique = true)
     private String sportName;
+
+    @Column(name = "DefaultRules")
     private String defaultRules;
-    private Boolean isActive;
 
-    public Sports() {}
+    @Column(name = "IsActive")
+    private Boolean isActive = true;
 
-    public Sports(Integer sportID, String sportName, String defaultRules, Boolean isActive) {
-        this.sportID = sportID;
-        this.sportName = sportName;
-        this.defaultRules = defaultRules;
-        this.isActive = isActive;
-    }
+    @CreationTimestamp
+    @Column(name = "CreatedDate", updatable = false)
+    private LocalDateTime createdDate;
 
-    public Integer getSportID() { return sportID; }
-    public void setSportID(Integer sportID) { this.sportID = sportID; }
+    @UpdateTimestamp
+    @Column(name = "UpdatedDate")
+    private LocalDateTime updatedDate;
+
+    // Getters and Setters
+    public Integer getSportId() { return sportId; }
+    public void setSportId(Integer sportId) { this.sportId = sportId; }
 
     public String getSportName() { return sportName; }
     public void setSportName(String sportName) { this.sportName = sportName; }
@@ -34,4 +44,7 @@ public class Sports {
 
     public Boolean getIsActive() { return isActive; }
     public void setIsActive(Boolean isActive) { this.isActive = isActive; }
+
+    public LocalDateTime getCreatedDate() { return createdDate; }
+    public LocalDateTime getUpdatedDate() { return updatedDate; }
 }

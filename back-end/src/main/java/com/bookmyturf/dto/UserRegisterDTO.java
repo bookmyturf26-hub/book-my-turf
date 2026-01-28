@@ -1,16 +1,26 @@
 
 	package com.bookmyturf.dto;
+	import jakarta.validation.constraints.NotBlank;
+	import jakarta.validation.constraints.Email;
+	import jakarta.validation.constraints.Size;
 
 	public class UserRegisterDTO {
+		 @NotBlank(message = "First name is required")
+		    private String firstName;
 
-	    private String firstName;
+		    @NotBlank(message = "Email is required")
+		    @Email
+		    private String emailAddress;
+
+		    @Size(min = 10, max = 15)
+		    private String contactPhoneNo;
+	   
 	    private String lastName;
-	    private String emailAddress;
+	    
 	    private String password;
 	    private String permanentAddress;
 	    private String cityName;
-	    private String contactPhoneNo;
-	    private String accountStatus;
+	   
 	    private String userType;
 
 	    public String getFirstName() { return firstName; }
@@ -33,9 +43,6 @@
 
 	    public String getContactPhoneNo() { return contactPhoneNo; }
 	    public void setContactPhoneNo(String contactPhoneNo) { this.contactPhoneNo = contactPhoneNo; }
-
-	    public String getAccountStatus() { return accountStatus; }
-	    public void setAccountStatus(String accountStatus) { this.accountStatus = accountStatus; }
 
 	    public String getUserType() { return userType; }
 	    public void setUserType(String userType) { this.userType = userType; }

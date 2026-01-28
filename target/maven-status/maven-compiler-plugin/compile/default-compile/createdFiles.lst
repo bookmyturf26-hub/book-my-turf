@@ -1,0 +1,16 @@
+com\bookmyturf\entity\Sports.class
+com\bookmyturf\service\UserService.class
+com\bookmyturf\entity\UserSession.class
+com\bookmyturf\repository\TurfRepository.class
+com\bookmyturf\repository\UserRepository.class
+com\bookmyturf\entity\UserType.class
+com\bookmyturf\service\TurfService.class
+com\bookmyturf\entity\Turf.class
+com\bookmyturf\controller\UserController.class
+com\bookmyturf\entity\User.class
+com\bookmyturf\repository\AdminRepository.class
+com\bookmyturf\repository\SportsRepository.class
+com\bookmyturf\TurfApplication.class
+com\bookmyturf\entity\Admin.class
+com\bookmyturf\repository\UserTypeRepository.class
+com\bookmyturf\service\SportsService.class

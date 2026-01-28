@@ -3,6 +3,11 @@ package com.bookmyturf.entity;
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Table(
 	    name = "USER",
@@ -44,16 +49,25 @@ public class User {
     @Column(name = "ContactPhoneNo", nullable = false,unique=true)
     private String contactPhoneNo;
 
+    @JsonIgnore
     @Column(name = "account_status")
     private String accountStatus;
+    
+    @PrePersist
+    private void setDefaults() {
+        if (this.accountStatus == null) {
+            this.accountStatus = "Active";
+        }
+    }
 
-    @Column(name = "CreatedDate", nullable = false)
+
+  /*  @Column(name = "CreatedDate", nullable = false)
     private LocalDateTime createdDate;
 
     @Column(name = "UpdatedDate")
     private LocalDateTime updatedDate;
 
-    @PrePersist
+   @PrePersist
     protected void onCreate() {
         this.createdDate = LocalDateTime.now();
     }
@@ -62,7 +76,16 @@ public class User {
     protected void onUpdate() {
         this.updatedDate = LocalDateTime.now();
     }
+*/
+    
+    @CreationTimestamp
+    @Column(name = "CreatedDate", updatable = false)
+    private LocalDateTime createdDate;
 
+    @UpdateTimestamp
+    @Column(name = "UpdatedDate")
+    private LocalDateTime updatedDate;
+    
     // Getters and Setters
     public Integer getUserID() { return userID; }
     public void setUserID(Integer userID) { this.userID = userID; }

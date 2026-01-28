@@ -8,24 +8,19 @@ public class Admin {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer adminID;
+    @Column(name = "AdminID")
+    private Integer adminId;
 
-    @OneToOne
-    @JoinColumn(name = "UserID")
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "UserID", nullable = false)
     private User user;
 
+    @Column(name = "UserName", nullable = false, unique = true)
     private String userName;
 
-    public Admin() {}
-
-    public Admin(Integer adminID, User user, String userName) {
-        this.adminID = adminID;
-        this.user = user;
-        this.userName = userName;
-    }
-
-    public Integer getAdminID() { return adminID; }
-    public void setAdminID(Integer adminID) { this.adminID = adminID; }
+    // Getters and Setters
+    public Integer getAdminId() { return adminId; }
+    public void setAdminId(Integer adminId) { this.adminId = adminId; }
 
     public User getUser() { return user; }
     public void setUser(User user) { this.user = user; }

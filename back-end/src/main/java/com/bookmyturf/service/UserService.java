@@ -69,7 +69,8 @@ public class UserService {
         user.setPermanentAddress(dto.getPermanentAddress());
         user.setCityName(dto.getCityName());
         user.setContactPhoneNo(dto.getContactPhoneNo());
-        user.setAccountStatus(dto.getAccountStatus());
+        user.setAccountStatus("active");
+  
 
         return registerUser(user, dto.getUserType()); // call existing method
     }

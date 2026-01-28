@@ -1,5 +1,7 @@
 package com.bookmyturf.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,10 +12,13 @@ import com.bookmyturf.repository.SportsRepository;
 public class SportsService {
 
     @Autowired
-    private SportsRepository sportsRepository;
+    private SportsRepository sportRepository;
 
-   
-    public Sports addSport(Sports sports) {
-        return sportsRepository.save(sports); // ✅ correct
+    public Sports createSport(Sports sport) {
+        return sportRepository.save(sport);
+    }
+
+    public List<Sports> getAllSports() {
+        return sportRepository.findAll();
     }
 }

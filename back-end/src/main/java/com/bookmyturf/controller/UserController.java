@@ -5,6 +5,8 @@ import com.bookmyturf.dto.UserRegisterDTO;
 import com.bookmyturf.entity.User;
 import com.bookmyturf.service.UserService;
 
+import jakarta.validation.Valid;
+
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,10 +21,11 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+   
 
 
     @PostMapping("/register")
-    public ResponseEntity<String> registerUser(@RequestBody UserRegisterDTO dto) {
+    public ResponseEntity<String> registerUser(@Valid @RequestBody UserRegisterDTO dto) {
 
         User savedUser = userService.registerUser(dto);
 

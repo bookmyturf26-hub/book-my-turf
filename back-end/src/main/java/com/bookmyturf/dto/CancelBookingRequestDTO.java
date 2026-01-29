@@ -13,6 +13,5 @@ package com.bookmyturf.dto;
 	        this.bookingId = bookingId;
 	    }
 	}
-
-
+	
 

@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/user")
-@CrossOrigin(origins = "*")
 public class UserController {
 
     @Autowired
@@ -34,7 +33,7 @@ public class UserController {
     
     
     @PostMapping("/login")
-    public ResponseEntity<User> loginUser(@RequestBody UserLoginDTO dto) {
+    public ResponseEntity<User> loginUser(@Valid @RequestBody UserLoginDTO dto) {
 
         User user = userService.loginUser(
                 dto.getEmailAddress(),

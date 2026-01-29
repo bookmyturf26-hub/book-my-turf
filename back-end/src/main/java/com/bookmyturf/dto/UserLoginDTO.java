@@ -9,8 +9,10 @@ public class UserLoginDTO {
 	@Email
     private String emailAddress;
 
-  
-    private String password;
+	@NotBlank
+	@Size(min = 6, message = "Password must be at least 6 characters")
+	private String password;
+
 
     // Getters and Setters
     public String getEmailAddress() { return emailAddress; }

@@ -1,9 +1,6 @@
 package com.bookmyturf.enums;
 
-	public enum TurfStatus {
-	    Active,
-	    Inactive
-	}
-
-
-
+public enum TurfStatus {
+    Active,
+    Inactive
+}

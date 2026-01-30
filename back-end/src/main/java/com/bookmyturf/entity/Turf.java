@@ -1,11 +1,8 @@
 package com.bookmyturf.entity;
 
 import jakarta.persistence.*;
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
-
 import com.bookmyturf.enums.TurfStatus;
-
+import org.hibernate.annotations.CreationTimestamp;
 import java.time.LocalDateTime;
 import java.util.Set;
 
@@ -18,33 +15,32 @@ public class Turf {
     @Column(name = "TurfID")
     private Integer turfId;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER) // Changed to EAGER for easier dashboard loading
     @JoinColumn(name = "TurfOwnerID", nullable = false)
     private User turfOwner;
 
-    @Column(name = "TurfName", nullable = false)
+    @Column(name = "TurfName", length = 100, nullable = false)
     private String turfName;
 
-    @Column(name = "Location", nullable = false)
+    @Column(name = "Location", length = 200, nullable = false)
     private String location;
 
-    @Column(name = "City", nullable = false)
+    @Column(name = "City", length = 50, nullable = false)
     private String city;
 
-    @Column(name = "Description")
+    @Column(name = "Description", columnDefinition = "TEXT")
     private String description;
 
     @Enumerated(EnumType.STRING)
     @Column(name = "TurfStatus")
     private TurfStatus turfStatus;
 
+    // This matches your DB "CreatedDate" column
     @CreationTimestamp
     @Column(name = "CreatedDate", updatable = false)
     private LocalDateTime createdDate;
 
-    @UpdateTimestamp
-    @Column(name = "UpdatedDate")
-    private LocalDateTime updatedDate;
+    // UpdatedDate removed because it's not in your DESCRIBE output
 
     @ManyToMany
     @JoinTable(
@@ -65,100 +61,37 @@ public class Turf {
     )
     private Set<Amenity> amenities;
 
-	public Integer getTurfId() {
-		return turfId;
-	}
+    // Getters and Setters
+    public Integer getTurfId() { return turfId; }
+    public void setTurfId(Integer turfId) { this.turfId = turfId; }
 
-	public void setTurfId(Integer turfId) {
-		this.turfId = turfId;
-	}
+    public User getTurfOwner() { return turfOwner; }
+    public void setTurfOwner(User turfOwner) { this.turfOwner = turfOwner; }
 
-	public User getTurfOwner() {
-		return turfOwner;
-	}
+    public String getTurfName() { return turfName; }
+    public void setTurfName(String turfName) { this.turfName = turfName; }
 
-	public void setTurfOwner(User turfOwner) {
-		this.turfOwner = turfOwner;
-	}
+    public String getLocation() { return location; }
+    public void setLocation(String location) { this.location = location; }
 
-	public String getTurfName() {
-		return turfName;
-	}
+    public String getCity() { return city; }
+    public void setCity(String city) { this.city = city; }
 
-	public void setTurfName(String turfName) {
-		this.turfName = turfName;
-	}
+    public String getDescription() { return description; }
+    public void setDescription(String description) { this.description = description; }
 
-	public String getLocation() {
-		return location;
-	}
+    public TurfStatus getTurfStatus() { return turfStatus; }
+    public void setTurfStatus(TurfStatus turfStatus) { this.turfStatus = turfStatus; }
 
-	public void setLocation(String location) {
-		this.location = location;
-	}
+    public LocalDateTime getCreatedDate() { return createdDate; }
+    public void setCreatedDate(LocalDateTime createdDate) { this.createdDate = createdDate; }
 
-	public String getCity() {
-		return city;
-	}
+    public Set<Sports> getSports() { return sports; }
+    public void setSports(Set<Sports> sports) { this.sports = sports; }
 
-	public void setCity(String city) {
-		this.city = city;
-	}
+    public Set<TurfPhotos> getPhotos() { return photos; }
+    public void setPhotos(Set<TurfPhotos> photos) { this.photos = photos; }
 
-	public String getDescription() {
-		return description;
-	}
-
-	public void setDescription(String description) {
-		this.description = description;
-	}
-
-	public TurfStatus getTurfStatus() {
-		return turfStatus;
-	}
-
-	public void setTurfStatus(TurfStatus turfStatus) {
-		this.turfStatus = turfStatus;
-	}
-
-	public LocalDateTime getCreatedDate() {
-		return createdDate;
-	}
-
-	public void setCreatedDate(LocalDateTime createdDate) {
-		this.createdDate = createdDate;
-	}
-
-	public LocalDateTime getUpdatedDate() {
-		return updatedDate;
-	}
-
-	public void setUpdatedDate(LocalDateTime updatedDate) {
-		this.updatedDate = updatedDate;
-	}
-
-	public Set<Sports> getSports() {
-		return sports;
-	}
-
-	public void setSports(Set<Sports> sports) {
-		this.sports = sports;
-	}
-
-	public Set<TurfPhotos> getPhotos() {
-		return photos;
-	}
-
-	public void setPhotos(Set<TurfPhotos> photos) {
-		this.photos = photos;
-	}
-
-	public Set<Amenity> getAmenities() {
-		return amenities;
-	}
-
-	public void setAmenities(Set<Amenity> amenities) {
-		this.amenities = amenities;
-	}
-
+    public Set<Amenity> getAmenities() { return amenities; }
+    public void setAmenities(Set<Amenity> amenities) { this.amenities = amenities; }
 }

@@ -1,51 +1,30 @@
+package com.bookmyturf.dto;
 
-	package com.bookmyturf.dto;
-	import jakarta.validation.constraints.NotBlank;
-	import jakarta.validation.constraints.Email;
-	import jakarta.validation.constraints.Size;
+public class UserRegisterDTO {
+    private String firstName;
+    private String lastName;
+    private String emailAddress;
+    private String password;
+    private String contactPhoneNo;
+    private String cityName;
+    private String permanentAddress;
+    private Integer userTypeId; // MUST match React: userTypeId
 
-	public class UserRegisterDTO {
-		 @NotBlank(message = "First name is required")
-		    private String firstName;
-
-		    @NotBlank(message = "Email is required")
-		    @Email
-		    private String emailAddress;
-
-		    @Size(min = 10, max = 15)
-		    private String contactPhoneNo;
-	   
-	    private String lastName;
-	    
-	    private String password;
-	    private String permanentAddress;
-	    private String cityName;
-	   
-	    private String userType;
-
-	    public String getFirstName() { return firstName; }
-	    public void setFirstName(String firstName) { this.firstName = firstName; }
-
-	    public String getLastName() { return lastName; }
-	    public void setLastName(String lastName) { this.lastName = lastName; }
-
-	    public String getEmailAddress() { return emailAddress; }
-	    public void setEmailAddress(String emailAddress) { this.emailAddress = emailAddress; }
-
-	    public String getPassword() { return password; }
-	    public void setPassword(String password) { this.password = password; }
-
-	    public String getPermanentAddress() { return permanentAddress; }
-	    public void setPermanentAddress(String permanentAddress) { this.permanentAddress = permanentAddress; }
-
-	    public String getCityName() { return cityName; }
-	    public void setCityName(String cityName) { this.cityName = cityName; }
-
-	    public String getContactPhoneNo() { return contactPhoneNo; }
-	    public void setContactPhoneNo(String contactPhoneNo) { this.contactPhoneNo = contactPhoneNo; }
-
-	    public String getUserType() { return userType; }
-	    public void setUserType(String userType) { this.userType = userType; }
-	}
-
-
+    // Standard Getters and Setters
+    public String getFirstName() { return firstName; }
+    public void setFirstName(String f) { this.firstName = f; }
+    public String getLastName() { return lastName; }
+    public void setLastName(String l) { this.lastName = l; }
+    public String getEmailAddress() { return emailAddress; }
+    public void setEmailAddress(String e) { this.emailAddress = e; }
+    public String getPassword() { return password; }
+    public void setPassword(String p) { this.password = p; }
+    public String getContactPhoneNo() { return contactPhoneNo; }
+    public void setContactPhoneNo(String c) { this.contactPhoneNo = c; }
+    public String getCityName() { return cityName; }
+    public void setCityName(String city) { this.cityName = city; }
+    public String getPermanentAddress() { return permanentAddress; }
+    public void setPermanentAddress(String a) { this.permanentAddress = a; }
+    public Integer getUserTypeId() { return userTypeId; }
+    public void setUserTypeId(Integer id) { this.userTypeId = id; }
+}

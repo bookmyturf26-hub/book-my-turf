@@ -2,20 +2,12 @@ package com.bookmyturf.entity;
 
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
-
+import java.util.List;
 import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
-
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
-@Table(
-	    name = "USER",
-	    uniqueConstraints = {
-	        @UniqueConstraint(columnNames = "EmailAddress"),
-	        @UniqueConstraint(columnNames = "ContactPhoneNo")
-	    }
-	)
+@Table(name = "USER")
 public class User {
 
     @Id
@@ -23,9 +15,8 @@ public class User {
     @Column(name = "UserID")
     private Integer userID;
 
-    // Many users can have one user type
-    @ManyToOne
-    @JoinColumn(name = "UserTypeID", referencedColumnName = "UserTypeID")
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "UserTypeID")
     private UserType userType;
 
     @Column(name = "FirstName", nullable = false)
@@ -34,42 +25,35 @@ public class User {
     @Column(name = "LastName", nullable = false)
     private String lastName;
 
-    @Column(name = "EmailAddress", nullable = false, unique = true)
+    @Column(name = "EmailAddress", unique = true, nullable = false)
     private String emailAddress;
 
     @Column(name = "Password", nullable = false)
     private String password;
 
-    @Column(name = "PermanentAddress", nullable = false)
-    private String permanentAddress;
-
-    @Column(name = "CityName", nullable = false)
-    private String cityName;
-
-    @Column(name = "ContactPhoneNo", nullable = false,unique=true)
+    @Column(name = "ContactPhoneNo")
     private String contactPhoneNo;
 
-    @JsonIgnore
-    @Column(name = "account_status")
-    private String accountStatus;
-    
-    @PrePersist
-    private void setDefaults() {
-        if (this.accountStatus == null) {
-            this.accountStatus = "Active";
-        }
-    }
+    @Column(name = "CityName")
+    private String cityName;
 
-    
+    @Column(name = "PermanentAddress")
+    private String permanentAddress;
+
+    @Column(name = "AccountStatus")
+    private String accountStatus; // e.g., "Active", "Suspended"
+
     @CreationTimestamp
     @Column(name = "CreatedDate", updatable = false)
     private LocalDateTime createdDate;
 
-    @UpdateTimestamp
-    @Column(name = "UpdatedDate")
-    private LocalDateTime updatedDate;
-    
-    // Getters and Setters
+    // Relationship to Turf (An owner can have multiple turfs)
+    // We use @JsonIgnore to prevent infinite loops when converting to JSON
+    @OneToMany(mappedBy = "turfOwner", cascade = CascadeType.ALL)
+    @JsonIgnore
+    private List<Turf> turfs;
+
+    // Standard Getters and Setters
     public Integer getUserID() { return userID; }
     public void setUserID(Integer userID) { this.userID = userID; }
 
@@ -88,21 +72,20 @@ public class User {
     public String getPassword() { return password; }
     public void setPassword(String password) { this.password = password; }
 
-    public String getPermanentAddress() { return permanentAddress; }
-    public void setPermanentAddress(String permanentAddress) { this.permanentAddress = permanentAddress; }
+    public String getContactPhoneNo() { return contactPhoneNo; }
+    public void setContactPhoneNo(String contactPhoneNo) { this.contactPhoneNo = contactPhoneNo; }
 
     public String getCityName() { return cityName; }
     public void setCityName(String cityName) { this.cityName = cityName; }
 
-    public String getContactPhoneNo() { return contactPhoneNo; }
-    public void setContactPhoneNo(String contactPhoneNo) { this.contactPhoneNo = contactPhoneNo; }
+    public String getPermanentAddress() { return permanentAddress; }
+    public void setPermanentAddress(String permanentAddress) { this.permanentAddress = permanentAddress; }
 
     public String getAccountStatus() { return accountStatus; }
     public void setAccountStatus(String accountStatus) { this.accountStatus = accountStatus; }
 
     public LocalDateTime getCreatedDate() { return createdDate; }
-    public void setCreatedDate(LocalDateTime createdDate) { this.createdDate = createdDate; }
 
-    public LocalDateTime getUpdatedDate() { return updatedDate; }
-    public void setUpdatedDate(LocalDateTime updatedDate) { this.updatedDate = updatedDate; }
+    public List<Turf> getTurfs() { return turfs; }
+    public void setTurfs(List<Turf> turfs) { this.turfs = turfs; }
 }

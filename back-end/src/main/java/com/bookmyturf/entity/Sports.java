@@ -1,10 +1,7 @@
 package com.bookmyturf.entity;
 
 import jakarta.persistence.*;
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
-
-import java.time.LocalDateTime;
+import java.util.Set;
 
 @Entity
 @Table(name = "SPORTS")
@@ -15,22 +12,22 @@ public class Sports {
     @Column(name = "SportID")
     private Integer sportId;
 
-    @Column(name = "SportName", nullable = false, unique = true)
+    @Column(name = "SportName", nullable = false)
     private String sportName;
 
-    @Column(name = "DefaultRules")
+    @Column(name = "DefaultRules", columnDefinition = "TEXT")
     private String defaultRules;
 
     @Column(name = "IsActive")
-    private Boolean isActive = true;
+    private Boolean isActive;
 
-    @CreationTimestamp
-    @Column(name = "CreatedDate", updatable = false)
-    private LocalDateTime createdDate;
+    // --- REMOVE OR COMMENT OUT THESE TWO IF THEY ARE NOT IN THE DB ---
+    // @Column(name = "CreatedDate")
+    // private LocalDateTime createdDate;
 
-    @UpdateTimestamp
-    @Column(name = "UpdatedDate")
-    private LocalDateTime updatedDate;
+    // @Column(name = "UpdatedDate")
+    // private LocalDateTime updatedDate;
+    // ----------------------------------------------------------------
 
     // Getters and Setters
     public Integer getSportId() { return sportId; }
@@ -44,7 +41,4 @@ public class Sports {
 
     public Boolean getIsActive() { return isActive; }
     public void setIsActive(Boolean isActive) { this.isActive = isActive; }
-
-    public LocalDateTime getCreatedDate() { return createdDate; }
-    public LocalDateTime getUpdatedDate() { return updatedDate; }
 }

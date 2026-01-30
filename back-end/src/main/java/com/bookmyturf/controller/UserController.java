@@ -10,11 +10,13 @@ import jakarta.validation.Valid;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api/user")
+@RequestMapping("/api/user") // Keep this as /user to match your existing code
+@CrossOrigin(origins = "http://localhost:3000") // ADD THIS LINE
 public class UserController {
 
     @Autowired
@@ -33,12 +35,17 @@ public class UserController {
     
     
     @PostMapping("/login")
-    public ResponseEntity<User> loginUser(@Valid @RequestBody UserLoginDTO dto) {
-
+    public ResponseEntity<?> loginUser(@Valid @RequestBody UserLoginDTO dto) {
         User user = userService.loginUser(
                 dto.getEmailAddress(),
                 dto.getPassword()
         );
+
+        if (user == null) {
+            // Return 401 instead of 200 so React catches the error
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid email or password");
+        }
+
         return ResponseEntity.ok(user);
     }
 

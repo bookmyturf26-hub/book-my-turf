@@ -1,11 +1,8 @@
 package com.bookmyturf.service;
 
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import com.bookmyturf.dto.TurfCreateDTO;
 import com.bookmyturf.entity.Turf;
 import com.bookmyturf.entity.User;
 import com.bookmyturf.enums.TurfStatus;
@@ -17,37 +14,27 @@ public class TurfService {
 
     @Autowired
     private TurfRepository turfRepository;
+    
+    // REMOVED: @Autowired private TurfService turfService; 
+    // You cannot autowire a service inside itself!
 
     @Autowired
     private UserRepository userRepository;
 
-    // Simple create (if you ever use it)
-    public Turf createTurf(Turf turf) {
-        turf.setTurfStatus(TurfStatus.Active);
+    public Turf registerNewTurf(Turf turf) {
+        Integer ownerId = turf.getTurfOwner().getUserID(); 
+        User owner = userRepository.findById(ownerId)
+                .orElseThrow(() -> new RuntimeException("User with ID " + ownerId + " not found"));
+        
+        turf.setTurfOwner(owner);
         return turfRepository.save(turf);
     }
 
-    // ✅ Create Turf by Turf Owner (MAIN METHOD)
-    public Turf addTurf(TurfCreateDTO dto) {
+    public Turf getById(Integer id) {
+        return turfRepository.findById(id).orElse(null);
+    }
 
-        User owner = userRepository.findById(dto.getTurfOwnerId())
-                .orElseThrow(() -> new RuntimeException("Turf Owner not found"));
-
-        Turf turf = new Turf();
-        turf.setTurfName(dto.getTurfName());
-        turf.setLocation(dto.getLocation());
-        turf.setCity(dto.getCity());
-        turf.setDescription(dto.getDescription());
-
-        // enum handling
-        turf.setTurfStatus(
-                dto.getTurfStatus() != null
-                        ? TurfStatus.valueOf(dto.getTurfStatus().toUpperCase())
-                        : TurfStatus.Active
-        );
-
-        turf.setTurfOwner(owner); // FK mapping
-
+    public Turf createTurf(Turf turf) {
         return turfRepository.save(turf);
     }
 
@@ -55,8 +42,12 @@ public class TurfService {
         return turfRepository.findAll();
     }
 
-    public Turf getById(Integer id) {
-        return turfRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Turf not found"));
+    public List<Turf> getTurfsByStatus(TurfStatus status) {
+        return turfRepository.findByTurfStatus(status);
+    }
+
+    public Turf getByOwnerId(Integer ownerId) {
+        // Finds the most recently created turf for this owner
+        return turfRepository.findTopByTurfOwner_UserIDOrderByTurfIdDesc(ownerId);
     }
 }

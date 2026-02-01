@@ -1,0 +1,717 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\PG-DAC2025\\BookMyTurfwebservices\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|d:\\pg-dac2025\\bookmyturfwebservices\\utilities\\idempotencychecker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|solutionrelative:utilities\\idempotencychecker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|d:\\pg-dac2025\\bookmyturfwebservices\\utilities\\encryptionhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|solutionrelative:utilities\\encryptionhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|d:\\pg-dac2025\\bookmyturfwebservices\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|solutionrelative:services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|d:\\pg-dac2025\\bookmyturfwebservices\\services\\paymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|solutionrelative:services\\paymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|d:\\pg-dac2025\\bookmyturfwebservices\\services\\webhookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|solutionrelative:services\\webhookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|d:\\pg-dac2025\\bookmyturfwebservices\\services\\razorpayservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|solutionrelative:services\\razorpayservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|d:\\pg-dac2025\\bookmyturfwebservices\\models\\entities\\bookingsynclog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|solutionrelative:models\\entities\\bookingsynclog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|d:\\pg-dac2025\\bookmyturfwebservices\\models\\entities\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|solutionrelative:models\\entities\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|d:\\pg-dac2025\\bookmyturfwebservices\\middleware\\exceptionhandlingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|solutionrelative:middleware\\exceptionhandlingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|d:\\pg-dac2025\\bookmyturfwebservices\\middleware\\apikeymiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|solutionrelative:middleware\\apikeymiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|d:\\pg-dac2025\\bookmyturfwebservices\\data\\applicationdbcontextreadonly.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|solutionrelative:data\\applicationdbcontextreadonly.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|d:\\pg-dac2025\\bookmyturfwebservices\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|d:\\pg-dac2025\\bookmyturfwebservices\\controllers\\refundcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|solutionrelative:controllers\\refundcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|d:\\pg-dac2025\\bookmyturfwebservices\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|d:\\pg-dac2025\\bookmyturfwebservices\\controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|solutionrelative:controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|d:\\pg-dac2025\\bookmyturfwebservices\\middleware\\requestloggingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|solutionrelative:middleware\\requestloggingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|d:\\pg-dac2025\\bookmyturfwebservices\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|d:\\pg-dac2025\\bookmyturfwebservices\\models\\dtos\\requests\\refundrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|solutionrelative:models\\dtos\\requests\\refundrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|d:\\pg-dac2025\\bookmyturfwebservices\\models\\dtos\\requests\\refundrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|solutionrelative:models\\dtos\\requests\\refundrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|d:\\pg-dac2025\\bookmyturfwebservices\\extensions\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|solutionrelative:extensions\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|d:\\pg-dac2025\\bookmyturfwebservices\\models\\entities\\refundrequestentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|solutionrelative:models\\entities\\refundrequestentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|d:\\pg-dac2025\\bookmyturfwebservices\\models\\enums\\refundenums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|solutionrelative:models\\enums\\refundenums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|d:\\pg-dac2025\\bookmyturfwebservices\\services\\interfaces\\iwebhookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|solutionrelative:services\\interfaces\\iwebhookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|d:\\pg-dac2025\\bookmyturfwebservices\\models\\entities\\webhooklog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|solutionrelative:models\\entities\\webhooklog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|d:\\pg-dac2025\\bookmyturfwebservices\\models\\entities\\refundrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|solutionrelative:models\\entities\\refundrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|d:\\pg-dac2025\\bookmyturfwebservices\\services\\interfaces\\irazorpayservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|solutionrelative:services\\interfaces\\irazorpayservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|d:\\pg-dac2025\\bookmyturfwebservices\\data\\seeddata\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|solutionrelative:data\\seeddata\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|d:\\pg-dac2025\\bookmyturfwebservices\\extensions\\applicationbuilderextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|solutionrelative:extensions\\applicationbuilderextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|d:\\pg-dac2025\\bookmyturfwebservices\\models\\dtos\\responses\\webhookevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|solutionrelative:models\\dtos\\responses\\webhookevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|d:\\pg-dac2025\\bookmyturfwebservices\\services\\interfaces\\isoftdeletable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|solutionrelative:services\\interfaces\\isoftdeletable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|d:\\pg-dac2025\\bookmyturfwebservices\\services\\interfaces\\iauditable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|solutionrelative:services\\interfaces\\iauditable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|d:\\pg-dac2025\\bookmyturfwebservices\\models\\dtos\\requests\\verifypaymentrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|solutionrelative:models\\dtos\\requests\\verifypaymentrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|d:\\pg-dac2025\\bookmyturfwebservices\\models\\dtos\\requests\\createorderrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|solutionrelative:models\\dtos\\requests\\createorderrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|d:\\pg-dac2025\\bookmyturfwebservices\\services\\interfaces\\ipaymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|solutionrelative:services\\interfaces\\ipaymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|d:\\pg-dac2025\\bookmyturfwebservices\\models\\entities\\paymenttransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|solutionrelative:models\\entities\\paymenttransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|d:\\pg-dac2025\\bookmyturfwebservices\\models\\enums\\paymentenums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|solutionrelative:models\\enums\\paymentenums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|d:\\pg-dac2025\\bookmyturfwebservices\\models\\settings\\slotlocksettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|solutionrelative:models\\settings\\slotlocksettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|d:\\pg-dac2025\\bookmyturfwebservices\\models\\settings\\apisettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|solutionrelative:models\\settings\\apisettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|d:\\pg-dac2025\\bookmyturfwebservices\\models\\settings\\emailsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|solutionrelative:models\\settings\\emailsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|d:\\pg-dac2025\\bookmyturfwebservices\\models\\settings\\paymentgatewaysettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|solutionrelative:models\\settings\\paymentgatewaysettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|d:\\pg-dac2025\\bookmyturfwebservices\\bookmyturfwebservices.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{605C64D1-A688-4031-8281-C3742C65DAB9}|BookMyTurfwebservices.csproj|solutionrelative:bookmyturfwebservices.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "IdempotencyChecker.cs",
+              "DocumentMoniker": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Utilities\\IdempotencyChecker.cs",
+              "RelativeDocumentMoniker": "Utilities\\IdempotencyChecker.cs",
+              "ToolTip": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Utilities\\IdempotencyChecker.cs",
+              "RelativeToolTip": "Utilities\\IdempotencyChecker.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T18:00:26.98Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EncryptionHelper.cs",
+              "DocumentMoniker": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Utilities\\EncryptionHelper.cs",
+              "RelativeDocumentMoniker": "Utilities\\EncryptionHelper.cs",
+              "ToolTip": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Utilities\\EncryptionHelper.cs",
+              "RelativeToolTip": "Utilities\\EncryptionHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T18:00:25.36Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Payment.cs",
+              "DocumentMoniker": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Models\\Entities\\Payment.cs",
+              "RelativeDocumentMoniker": "Models\\Entities\\Payment.cs",
+              "ToolTip": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Models\\Entities\\Payment.cs",
+              "RelativeToolTip": "Models\\Entities\\Payment.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAUwBgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T14:18:46.207Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "BookingSyncLog.cs",
+              "DocumentMoniker": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Models\\Entities\\BookingSyncLog.cs",
+              "RelativeDocumentMoniker": "Models\\Entities\\BookingSyncLog.cs",
+              "ToolTip": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Models\\Entities\\BookingSyncLog.cs",
+              "RelativeToolTip": "Models\\Entities\\BookingSyncLog.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAkwC4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T14:27:52.914Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PaymentService.cs",
+              "DocumentMoniker": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Services\\PaymentService.cs",
+              "RelativeDocumentMoniker": "Services\\PaymentService.cs",
+              "ToolTip": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Services\\PaymentService.cs",
+              "RelativeToolTip": "Services\\PaymentService.cs",
+              "ViewState": "AgIAANIAAAAAAAAAAAAAAP8AAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T14:02:48.098Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RazorPayService.cs",
+              "DocumentMoniker": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Services\\RazorPayService.cs",
+              "RelativeDocumentMoniker": "Services\\RazorPayService.cs",
+              "ToolTip": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Services\\RazorPayService.cs",
+              "RelativeToolTip": "Services\\RazorPayService.cs",
+              "ViewState": "AgIAAKoAAAAAAAAAAAAQwLoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T14:03:08.289Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "WebhookService.cs",
+              "DocumentMoniker": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Services\\WebhookService.cs",
+              "RelativeDocumentMoniker": "Services\\WebhookService.cs",
+              "ToolTip": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Services\\WebhookService.cs",
+              "RelativeToolTip": "Services\\WebhookService.cs",
+              "ViewState": "AgIAAGgAAAAAAAAAAAAQwHgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T14:29:39.495Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EmailService.cs",
+              "DocumentMoniker": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Services\\EmailService.cs",
+              "RelativeDocumentMoniker": "Services\\EmailService.cs",
+              "ToolTip": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Services\\EmailService.cs",
+              "RelativeToolTip": "Services\\EmailService.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAACoAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T14:03:31.777Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ExceptionHandlingMiddleware.cs",
+              "DocumentMoniker": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Middleware\\ExceptionHandlingMiddleware.cs",
+              "RelativeDocumentMoniker": "Middleware\\ExceptionHandlingMiddleware.cs",
+              "ToolTip": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Middleware\\ExceptionHandlingMiddleware.cs",
+              "RelativeToolTip": "Middleware\\ExceptionHandlingMiddleware.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAAAAMAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T13:48:31.595Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ApiKeyMiddleware.cs",
+              "DocumentMoniker": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Middleware\\ApiKeyMiddleware.cs",
+              "RelativeDocumentMoniker": "Middleware\\ApiKeyMiddleware.cs",
+              "ToolTip": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Middleware\\ApiKeyMiddleware.cs",
+              "RelativeToolTip": "Middleware\\ApiKeyMiddleware.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T17:56:59.243Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
+              "ToolTip": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAAAFEAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T13:53:36.216Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "RefundController.cs",
+              "DocumentMoniker": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Controllers\\RefundController.cs",
+              "RelativeDocumentMoniker": "Controllers\\RefundController.cs",
+              "ToolTip": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Controllers\\RefundController.cs",
+              "RelativeToolTip": "Controllers\\RefundController.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACEAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T14:52:37.701Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\PG-DAC2025\\BookMyTurfwebservices\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "D:\\PG-DAC2025\\BookMyTurfwebservices\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAABsAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-01-31T15:02:11.127Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "PaymentController.cs",
+              "DocumentMoniker": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Controllers\\PaymentController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PaymentController.cs",
+              "ToolTip": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Controllers\\PaymentController.cs",
+              "RelativeToolTip": "Controllers\\PaymentController.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAAB0AAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T14:15:20.614Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ApplicationDbContextReadOnly.cs",
+              "DocumentMoniker": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Data\\ApplicationDbContextReadOnly.cs",
+              "RelativeDocumentMoniker": "Data\\ApplicationDbContextReadOnly.cs",
+              "ToolTip": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Data\\ApplicationDbContextReadOnly.cs",
+              "RelativeToolTip": "Data\\ApplicationDbContextReadOnly.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T14:24:33.725Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "RequestLoggingMiddleware.cs",
+              "DocumentMoniker": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Middleware\\RequestLoggingMiddleware.cs",
+              "RelativeDocumentMoniker": "Middleware\\RequestLoggingMiddleware.cs",
+              "ToolTip": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Middleware\\RequestLoggingMiddleware.cs",
+              "RelativeToolTip": "Middleware\\RequestLoggingMiddleware.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAkAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T15:03:06.538Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAASwC4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T14:05:21.072Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "RefundRequest.cs",
+              "DocumentMoniker": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Models\\DTOs\\Requests\\RefundRequest.cs",
+              "RelativeDocumentMoniker": "Models\\DTOs\\Requests\\RefundRequest.cs",
+              "ToolTip": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Models\\DTOs\\Requests\\RefundRequest.cs",
+              "RelativeToolTip": "Models\\DTOs\\Requests\\RefundRequest.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAxwEAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T14:58:44.203Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "RefundRequestDto.cs",
+              "DocumentMoniker": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Models\\DTOs\\Requests\\RefundRequestDto.cs",
+              "RelativeDocumentMoniker": "Models\\DTOs\\Requests\\RefundRequestDto.cs",
+              "ToolTip": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Models\\DTOs\\Requests\\RefundRequestDto.cs",
+              "RelativeToolTip": "Models\\DTOs\\Requests\\RefundRequestDto.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwBUAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T14:11:21.263Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "RefundRequestEntity.cs",
+              "DocumentMoniker": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Models\\Entities\\RefundRequestEntity.cs",
+              "RelativeDocumentMoniker": "Models\\Entities\\RefundRequestEntity.cs",
+              "ToolTip": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Models\\Entities\\RefundRequestEntity.cs",
+              "RelativeToolTip": "Models\\Entities\\RefundRequestEntity.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAA4wDgAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T14:20:05.452Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ServiceCollectionExtensions.cs",
+              "DocumentMoniker": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Extensions\\ServiceCollectionExtensions.cs",
+              "RelativeDocumentMoniker": "Extensions\\ServiceCollectionExtensions.cs",
+              "ToolTip": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Extensions\\ServiceCollectionExtensions.cs",
+              "RelativeToolTip": "Extensions\\ServiceCollectionExtensions.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAQwEsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T14:26:53.688Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "RefundEnums.cs",
+              "DocumentMoniker": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Models\\Enums\\RefundEnums.cs",
+              "RelativeDocumentMoniker": "Models\\Enums\\RefundEnums.cs",
+              "ToolTip": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Models\\Enums\\RefundEnums.cs",
+              "RelativeToolTip": "Models\\Enums\\RefundEnums.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAQwB8AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T14:32:31.12Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "IWebhookService.cs",
+              "DocumentMoniker": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Services\\Interfaces\\IWebhookService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\IWebhookService.cs",
+              "ToolTip": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Services\\Interfaces\\IWebhookService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\IWebhookService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T14:28:49.816Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "WebhookLog.cs",
+              "DocumentMoniker": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Models\\Entities\\WebhookLog.cs",
+              "RelativeDocumentMoniker": "Models\\Entities\\WebhookLog.cs",
+              "ToolTip": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Models\\Entities\\WebhookLog.cs",
+              "RelativeToolTip": "Models\\Entities\\WebhookLog.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwCMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T14:33:15.879Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "RefundRequest.cs",
+              "DocumentMoniker": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Models\\Entities\\RefundRequest.cs",
+              "RelativeDocumentMoniker": "Models\\Entities\\RefundRequest.cs",
+              "ToolTip": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Models\\Entities\\RefundRequest.cs",
+              "RelativeToolTip": "Models\\Entities\\RefundRequest.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAswD4AAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T14:28:00.602Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "IRazorPayService.cs",
+              "DocumentMoniker": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Services\\Interfaces\\IRazorPayService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\IRazorPayService.cs",
+              "ToolTip": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Services\\Interfaces\\IRazorPayService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\IRazorPayService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T14:28:24.694Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "ApplicationBuilderExtensions.cs",
+              "DocumentMoniker": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Extensions\\ApplicationBuilderExtensions.cs",
+              "RelativeDocumentMoniker": "Extensions\\ApplicationBuilderExtensions.cs",
+              "ToolTip": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Extensions\\ApplicationBuilderExtensions.cs",
+              "RelativeToolTip": "Extensions\\ApplicationBuilderExtensions.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAQwBEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T13:49:52.928Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "SeedData.cs",
+              "DocumentMoniker": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Data\\SeedData\\SeedData.cs",
+              "RelativeDocumentMoniker": "Data\\SeedData\\SeedData.cs",
+              "ToolTip": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Data\\SeedData\\SeedData.cs",
+              "RelativeToolTip": "Data\\SeedData\\SeedData.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAQwCUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T14:04:43.239Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "WebhookEvent.cs",
+              "DocumentMoniker": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Models\\DTOs\\Responses\\WebhookEvent.cs",
+              "RelativeDocumentMoniker": "Models\\DTOs\\Responses\\WebhookEvent.cs",
+              "ToolTip": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Models\\DTOs\\Responses\\WebhookEvent.cs",
+              "RelativeToolTip": "Models\\DTOs\\Responses\\WebhookEvent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T14:13:03.378Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "ISoftDeletable.cs",
+              "DocumentMoniker": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Services\\Interfaces\\ISoftDeletable.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\ISoftDeletable.cs",
+              "ToolTip": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Services\\Interfaces\\ISoftDeletable.cs",
+              "RelativeToolTip": "Services\\Interfaces\\ISoftDeletable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T14:17:53.689Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "IAuditable.cs",
+              "DocumentMoniker": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Services\\Interfaces\\IAuditable.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\IAuditable.cs",
+              "ToolTip": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Services\\Interfaces\\IAuditable.cs",
+              "RelativeToolTip": "Services\\Interfaces\\IAuditable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T14:17:15.23Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "VerifyPaymentRequest.cs",
+              "DocumentMoniker": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Models\\DTOs\\Requests\\VerifyPaymentRequest.cs",
+              "RelativeDocumentMoniker": "Models\\DTOs\\Requests\\VerifyPaymentRequest.cs",
+              "ToolTip": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Models\\DTOs\\Requests\\VerifyPaymentRequest.cs",
+              "RelativeToolTip": "Models\\DTOs\\Requests\\VerifyPaymentRequest.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAQwBEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T14:14:50.714Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "CreateOrderRequest.cs",
+              "DocumentMoniker": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Models\\DTOs\\Requests\\CreateOrderRequest.cs",
+              "RelativeDocumentMoniker": "Models\\DTOs\\Requests\\CreateOrderRequest.cs",
+              "ToolTip": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Models\\DTOs\\Requests\\CreateOrderRequest.cs",
+              "RelativeToolTip": "Models\\DTOs\\Requests\\CreateOrderRequest.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAQwBoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T14:14:08.201Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "PaymentTransaction.cs",
+              "DocumentMoniker": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Models\\Entities\\PaymentTransaction.cs",
+              "RelativeDocumentMoniker": "Models\\Entities\\PaymentTransaction.cs",
+              "ToolTip": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Models\\Entities\\PaymentTransaction.cs",
+              "RelativeToolTip": "Models\\Entities\\PaymentTransaction.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAQwCcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T14:09:49.169Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "IPaymentService.cs",
+              "DocumentMoniker": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Services\\Interfaces\\IPaymentService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\IPaymentService.cs",
+              "ToolTip": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Services\\Interfaces\\IPaymentService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\IPaymentService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T14:01:37.694Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "PaymentEnums.cs",
+              "DocumentMoniker": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Models\\Enums\\PaymentEnums.cs",
+              "RelativeDocumentMoniker": "Models\\Enums\\PaymentEnums.cs",
+              "ToolTip": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Models\\Enums\\PaymentEnums.cs",
+              "RelativeToolTip": "Models\\Enums\\PaymentEnums.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAAABsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T14:07:47.253Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "SlotLockSettings.cs",
+              "DocumentMoniker": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Models\\Settings\\SlotLockSettings.cs",
+              "RelativeDocumentMoniker": "Models\\Settings\\SlotLockSettings.cs",
+              "ToolTip": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Models\\Settings\\SlotLockSettings.cs",
+              "RelativeToolTip": "Models\\Settings\\SlotLockSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T14:01:04.154Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "ApiSettings.cs",
+              "DocumentMoniker": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Models\\Settings\\ApiSettings.cs",
+              "RelativeDocumentMoniker": "Models\\Settings\\ApiSettings.cs",
+              "ToolTip": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Models\\Settings\\ApiSettings.cs",
+              "RelativeToolTip": "Models\\Settings\\ApiSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T14:00:36.854Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "EmailSettings.cs",
+              "DocumentMoniker": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Models\\Settings\\EmailSettings.cs",
+              "RelativeDocumentMoniker": "Models\\Settings\\EmailSettings.cs",
+              "ToolTip": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Models\\Settings\\EmailSettings.cs",
+              "RelativeToolTip": "Models\\Settings\\EmailSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T14:00:09.902Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "PaymentGatewaySettings.cs",
+              "DocumentMoniker": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Models\\Settings\\PaymentGatewaySettings.cs",
+              "RelativeDocumentMoniker": "Models\\Settings\\PaymentGatewaySettings.cs",
+              "ToolTip": "D:\\PG-DAC2025\\BookMyTurfwebservices\\Models\\Settings\\PaymentGatewaySettings.cs",
+              "RelativeToolTip": "Models\\Settings\\PaymentGatewaySettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T13:59:36.292Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "BookMyTurfwebservices",
+              "DocumentMoniker": "D:\\PG-DAC2025\\BookMyTurfwebservices\\BookMyTurfwebservices.csproj",
+              "RelativeDocumentMoniker": "BookMyTurfwebservices.csproj",
+              "ToolTip": "D:\\PG-DAC2025\\BookMyTurfwebservices\\BookMyTurfwebservices.csproj",
+              "RelativeToolTip": "BookMyTurfwebservices.csproj",
+              "ViewState": "AgIAABIAAAAAAAAAAAAwwCkAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-01-31T13:43:39.912Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

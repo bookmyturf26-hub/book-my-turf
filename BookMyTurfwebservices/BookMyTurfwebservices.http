@@ -1,0 +1,6 @@
+@BookMyTurfwebservices_HostAddress = http://localhost:5121
+
+GET {{BookMyTurfwebservices_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

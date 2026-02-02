@@ -1,5 +1,4 @@
-CREATE DATABASE IF NOT EXISTS bookmyturf_db;
-USE bookmyturf_db;
+
 -- MySQL dump 10.13  Distrib 8.0.25, for Win64 (x86_64)
 --
 -- Host: localhost    Database: bookmyturf_db

@@ -1,0 +1,145 @@
+[
+  {
+    "ContainingType": "BookMyTurfwebservices.Controllers.PaymentController",
+    "Method": "CreateOrder",
+    "RelativePath": "api/Payment/create-order",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "BookMyTurfwebservices.Models.DTOs.Requests.CreateOrderRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookMyTurfwebservices.Controllers.PaymentController",
+    "Method": "VerifyPayment",
+    "RelativePath": "api/Payment/verify-payment",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "BookMyTurfwebservices.Models.DTOs.Requests.VerifyPaymentRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookMyTurfwebservices.Controllers.PaymentController",
+    "Method": "PaymentWebhook",
+    "RelativePath": "api/Payment/webhook",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookMyTurfwebservices.Controllers.RefundController",
+    "Method": "CheckRefundEligibility",
+    "RelativePath": "api/Refund/eligibility/{paymentId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "paymentId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookMyTurfwebservices.Controllers.RefundController",
+    "Method": "InitiateFullRefund",
+    "RelativePath": "api/Refund/full",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "BookMyTurfwebservices.Models.DTOs.Requests.FullRefundRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookMyTurfwebservices.Controllers.RefundController",
+    "Method": "InitiateRefund",
+    "RelativePath": "api/Refund/initiate",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "BookMyTurfwebservices.Models.DTOs.Requests.RefundRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookMyTurfwebservices.Controllers.RefundController",
+    "Method": "InitiatePartialRefund",
+    "RelativePath": "api/Refund/partial",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "BookMyTurfwebservices.Models.DTOs.Requests.PartialRefundRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookMyTurfwebservices.Controllers.RefundController",
+    "Method": "GetRefundStatus",
+    "RelativePath": "api/Refund/status/{refundId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "refundId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BookMyTurfwebservices.Controllers.WeatherForecastController",
+    "Method": "Get",
+    "RelativePath": "WeatherForecast",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[BookMyTurfwebservices.WeatherForecast, BookMyTurfwebservices, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetWeatherForecast"
+  }
+]

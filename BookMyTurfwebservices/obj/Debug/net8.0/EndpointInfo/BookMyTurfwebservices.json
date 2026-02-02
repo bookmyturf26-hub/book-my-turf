@@ -1,0 +1,468 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "BookMyTurfwebservices",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/Payment/create-order": {
+      "post": {
+        "tags": [
+          "Payment"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateOrderRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateOrderRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateOrderRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Payment/verify-payment": {
+      "post": {
+        "tags": [
+          "Payment"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VerifyPaymentRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VerifyPaymentRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/VerifyPaymentRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Payment/webhook": {
+      "post": {
+        "tags": [
+          "Payment"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Refund/initiate": {
+      "post": {
+        "tags": [
+          "Refund"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RefundRequestDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RefundRequestDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RefundRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Refund/partial": {
+      "post": {
+        "tags": [
+          "Refund"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PartialRefundRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PartialRefundRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PartialRefundRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Refund/full": {
+      "post": {
+        "tags": [
+          "Refund"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FullRefundRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FullRefundRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/FullRefundRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Refund/status/{refundId}": {
+      "get": {
+        "tags": [
+          "Refund"
+        ],
+        "parameters": [
+          {
+            "name": "refundId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Refund/eligibility/{paymentId}": {
+      "get": {
+        "tags": [
+          "Refund"
+        ],
+        "parameters": [
+          {
+            "name": "paymentId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/WeatherForecast": {
+      "get": {
+        "tags": [
+          "WeatherForecast"
+        ],
+        "operationId": "GetWeatherForecast",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WeatherForecast"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WeatherForecast"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WeatherForecast"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "CreateOrderRequest": {
+        "required": [
+          "amount",
+          "bookingId",
+          "customerEmail",
+          "customerPhone"
+        ],
+        "type": "object",
+        "properties": {
+          "bookingId": {
+            "maxLength": 36,
+            "minLength": 36,
+            "type": "string"
+          },
+          "amount": {
+            "maximum": 100000,
+            "minimum": 0.01,
+            "type": "number",
+            "format": "double"
+          },
+          "customerEmail": {
+            "maxLength": 100,
+            "minLength": 0,
+            "type": "string",
+            "format": "email"
+          },
+          "customerPhone": {
+            "maxLength": 15,
+            "minLength": 0,
+            "type": "string",
+            "format": "tel"
+          },
+          "description": {
+            "maxLength": 200,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FullRefundRequest": {
+        "required": [
+          "paymentId",
+          "reason"
+        ],
+        "type": "object",
+        "properties": {
+          "paymentId": {
+            "maxLength": 36,
+            "minLength": 36,
+            "type": "string"
+          },
+          "reason": {
+            "maxLength": 500,
+            "minLength": 10,
+            "type": "string"
+          },
+          "sendNotification": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PartialRefundRequest": {
+        "required": [
+          "amount",
+          "paymentId",
+          "reason"
+        ],
+        "type": "object",
+        "properties": {
+          "paymentId": {
+            "maxLength": 36,
+            "minLength": 36,
+            "type": "string"
+          },
+          "amount": {
+            "maximum": 100000,
+            "minimum": 0.01,
+            "type": "number",
+            "format": "double"
+          },
+          "reason": {
+            "maxLength": 500,
+            "minLength": 10,
+            "type": "string"
+          },
+          "customerEmail": {
+            "maxLength": 100,
+            "minLength": 0,
+            "type": "string",
+            "format": "email",
+            "nullable": true
+          },
+          "customerPhone": {
+            "maxLength": 20,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "sendNotification": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "RefundRequestDto": {
+        "required": [
+          "amount",
+          "paymentId",
+          "reason"
+        ],
+        "type": "object",
+        "properties": {
+          "paymentId": {
+            "maxLength": 36,
+            "minLength": 36,
+            "type": "string"
+          },
+          "amount": {
+            "maximum": 100000,
+            "minimum": 0.01,
+            "type": "number",
+            "format": "double"
+          },
+          "reason": {
+            "maxLength": 500,
+            "minLength": 10,
+            "type": "string"
+          },
+          "referenceNumber": {
+            "maxLength": 100,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "customerEmail": {
+            "maxLength": 100,
+            "minLength": 0,
+            "type": "string",
+            "format": "email",
+            "nullable": true
+          },
+          "customerPhone": {
+            "maxLength": 20,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "sendNotification": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "VerifyPaymentRequest": {
+        "required": [
+          "orderId",
+          "paymentId",
+          "signature"
+        ],
+        "type": "object",
+        "properties": {
+          "orderId": {
+            "maxLength": 100,
+            "minLength": 0,
+            "type": "string"
+          },
+          "paymentId": {
+            "maxLength": 100,
+            "minLength": 0,
+            "type": "string"
+          },
+          "signature": {
+            "maxLength": 500,
+            "minLength": 0,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "WeatherForecast": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "temperatureC": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "temperatureF": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "summary": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}
